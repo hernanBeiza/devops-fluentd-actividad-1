@@ -55,3 +55,10 @@ docker ps
 ````
 docker exec -it <id contenedor> /bin/sh
 ````
+
+- En el contenedor
+
+```
+cd /Volumes/fluentd/log
+```
+
