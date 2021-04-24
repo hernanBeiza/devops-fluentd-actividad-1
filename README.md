@@ -17,13 +17,13 @@ docker pull fluentd
 - Crear volumen docker
 
 ```
-docker volume create fluentd 
+docker volume create fluentd-vol 
 ```
 
 - Correr docker con configuración
 
 ````
-docker run --name fluentd -d -p 24224:24224 -p 24224:24224/udp -u fluent -v fluentd:/Volumes/fluentd/log -v <ruta completa>/archivo.conf:/fluentd/etc/fluent.conf fluentd 
+docker run --name fluentd -d -p 24224:24224 -p 24224:24224/udp -u fluent -v fluentd-log:/Volumes/fluentd/log -v <ruta completa>/archivo.conf:/fluentd/etc/fluent.conf fluentd 
 ````
 
 ## Iniciar sesión SSH
@@ -61,4 +61,3 @@ docker exec -it <id contenedor> /bin/sh
 ```
 cd /Volumes/fluentd/log
 ```
-
