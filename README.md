@@ -40,6 +40,12 @@ docker ps
 docker exec -it <id contenedor> /bin/sh
 ````
 
+- Iniciar sesión ssh en el contenedor como root
+
+```
+docker exec -it -u root <id contenedor> /bin/sh
+```
+
 ## Probar
 
 ````
@@ -61,3 +67,4 @@ docker exec -it <id contenedor> /bin/sh
 ```
 cd /Volumes/fluentd/log
 ```
+
